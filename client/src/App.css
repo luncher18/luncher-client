@@ -15,7 +15,7 @@ light green: #A3C4BC
   justify-content: center;
   align-items: center;
   /* background-color: #258ea6; */
-  background-image: url('./Images/school1.jpeg');
+  background-image: url("./Images/artblue.jpg");
 }
 
 .form-wrapper {
@@ -130,4 +130,3 @@ input.error {
   color: #999;
   font-weight: lighter;
 }
-
