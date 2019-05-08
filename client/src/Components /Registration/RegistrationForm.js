@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 // what someone can use  for email  validation
 const emailRegex = RegExp(
@@ -150,10 +151,7 @@ class RegistrationForm extends Component {
               )}
             </div>
             <div className="RegAccount">
-              <small>
-                If you're a teacher in need of funding,{" "}
-                <button type="create">Create Account</button>{" "}
-              </small>
+              <button type="Submit"><Link to="/">Submit</Link></button>
             </div>
           </form>
         </div>

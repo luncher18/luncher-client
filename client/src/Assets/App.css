@@ -110,8 +110,8 @@ input.error {
 }
 
 .Account button {
-  background-color: #55a0dd;
-  color: #fff;
+  background-color: #bac9d4;
+  color: rgb(60, 157, 223);
   border: 2px solid #fff;
   width: 100%;
   margin-top: 1em;
@@ -132,17 +132,3 @@ input.error {
   color: #999;
   font-weight: lighter;
 }
-
-.RegAccount {
-  
-  color: rgb(167, 18, 18);
-  border: 2px solid #fff;
-  width: 100%;
-  margin-top: 1em;
-  padding: 8px 0px;
-  font-size: 1em;
-  font-weight: lighter;
-  letter-spacing: 1px;
-  margin-bottom: 0.25em;
-}
-
