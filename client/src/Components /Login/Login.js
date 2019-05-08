@@ -116,7 +116,9 @@ class Login extends Component {
               <button type="create">
                 <Link to="RegistrationForm">Create Account</Link>
               </button>
-              <small>Donors please proceed here </small>
+              <small>
+                Donors please proceed <Link to="here">here</Link>{" "}
+              </small>
             </div>
           </form>
         </div>
