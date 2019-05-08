@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-
+// what someone can use  for email  validation
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
@@ -63,11 +63,11 @@ class RegistrationForm extends Component {
     switch (name) {
       case "firstName":
         formErrors.firstName =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+          value.length < 3 ? "minimum 3 characters required" : "";
         break;
       case "lastName":
         formErrors.lastName =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+          value.length < 3 ? "minimum 3 characters required" : "";
         break;
       case "email":
         formErrors.email = emailRegex.test(value)
@@ -76,7 +76,7 @@ class RegistrationForm extends Component {
         break;
       case "password":
         formErrors.password =
-          value.length < 6 ? "minimum 6 characaters required" : "";
+          value.length < 6 ? "minimum 6 characters required" : "";
         break;
       default:
         break;
@@ -149,9 +149,11 @@ class RegistrationForm extends Component {
                 <span className="errorMessage">{formErrors.password}</span>
               )}
             </div>
-            <div className="createAccount">
-              <button type="submit">Register</button>
-              <small>Already Have an Account?</small>
+            <div className="RegAccount">
+              <small>
+                If you're a teacher in need of funding,{" "}
+                <button type="create">Create Account</button>{" "}
+              </small>
             </div>
           </form>
         </div>
@@ -161,19 +163,3 @@ class RegistrationForm extends Component {
 }
 
 export default RegistrationForm;
-
-// import React from 'react';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h1>
-//           Welcome To Luncher
-//         </h1>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
