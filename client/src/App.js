@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Components /Header/Header";
 import RegistrationForm from "./Components /Registration/RegistrationForm";
 import Login from "./Components /Login/Login";
+import RegButton from "./Components /Registration/RegButton";
 
 
 class App extends React.Component {
@@ -10,6 +11,8 @@ class App extends React.Component {
       <div className="">
         <Header />
         <Login />
+      
+    
       </div>
     );
   }
