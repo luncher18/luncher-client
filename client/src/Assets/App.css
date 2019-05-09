@@ -132,3 +132,7 @@ input.error {
   color: #999;
   font-weight: lighter;
 }
+nav {
+  display: flex;
+  justify-content: space-around;
+}
