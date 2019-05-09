@@ -111,13 +111,13 @@ class Login extends Component {
               )}
             </div>
             <div className="Account">
-              <button type="submit">Sign-in</button>
+              <button type="/DonationsPage">Sign-in</button>
 
               <button type="create">
                 <Link to="RegistrationForm">Create Account</Link>
               </button>
               <small>
-                Donors please proceed <Link to="here">here</Link>{" "}
+                Donors please proceed <Link to="/DonationsPage">here</Link>{" "}
               </small>
             </div>
           </form>

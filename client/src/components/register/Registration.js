@@ -18,7 +18,7 @@ export class Registration extends Component {
     return (
       <div>
         <h1>Register Here</h1>
-        <RegisterForm regitered={this.registering}  users={this.props.users}/>
+        <RegisterForm registered={this.registering}  users={this.props.users}/>
       </div>
     )
   }
