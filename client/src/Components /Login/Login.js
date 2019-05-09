@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { login } from "../../actions/login";
+import { connect } from 'react-redux';
 
 // what someone can use  for email  validation
 const emailRegex = RegExp(
@@ -56,6 +58,7 @@ class Login extends Component {
     e.preventDefault();
     const { name, value } = e.target;
     let formErrors = { ...this.state.formErrors };
+    
 
     switch (name) {
       case "email":
@@ -72,6 +75,14 @@ class Login extends Component {
     }
 
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  };
+
+  login = e => {
+    e.preventDefault();
+    this.props.login(this.state.credentials)
+    .then(() => {
+        this.props.history.push("/protected")
+    });
   };
 
   render() {
@@ -111,7 +122,7 @@ class Login extends Component {
               )}
             </div>
             <div className="Account">
-              <button type="submit">Sign-in</button>
+              <button type="submit" onClick={login}>Sign-in</button>
 
               <button type="create">
                 <Link to="RegistrationForm">Create Account</Link>
@@ -127,4 +138,9 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapStateToProps = ({ loggingIn, error}) => ({
+    error,
+    loggingIn
+});
+
+export default connect(mapStateToProps, { login })(Login);
