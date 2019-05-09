@@ -48,7 +48,7 @@ class Donations extends React.Component {
                 <input onChange = {this.changeHandler} type = "number" name = "amount" placeholder='Amount' value={this.state.amount} required/>
                 <input onChange = {this.changeHandler} type = "text" name = "donorId" placeholder="donorId" value={this.state.donorId}  required/>
                 <input onChange = {this.changeHandler} type = "text" name = "schoolId" placeholder="schoolId" value={this.state.schoolId} required/>
-                <input onChange = {this.changeHandler} type = "selection" name = "fundedSchool" placeholder="fundedSchool" value={this.state.fundedSchool} required/>
+                <input onChange = {this.changeHandler} type = "selection" name = "fundedSchool" placeholder="fundedSchool" value={this.props.schools} required/>
                 <button type = "submit">Donations</button>
             </form>
             

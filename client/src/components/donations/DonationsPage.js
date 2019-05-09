@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import {donatingTo} from "../../actions/donate";
-import { Route } from 'react-router-dom';
+import Schools from "./Schools"
+// import { Route } from 'react-router-dom';
 import Donations from "./Donations";
 
 class DonationsPage extends Component {
@@ -12,8 +13,10 @@ class DonationsPage extends Component {
   render() {
     return (
       <div>
+        
        {/* <Route path ={"/donate"} render= {props =>(<Donations {...props} donors ={this.props.donors}/>)}/> */}
-       <Donations />
+       <Donations donors={this.props.donors} />
+       <Schools schools={this.props.schools}/>
       </div>
     )
   }
@@ -21,6 +24,7 @@ class DonationsPage extends Component {
 const mapStateToProps = state =>{
   console.log(state)
     return{
+        schools: state.schoolReducer.schools,
         donors: state.donationReducer.donors,
         fetching: state.fetching,
         error: state.error
