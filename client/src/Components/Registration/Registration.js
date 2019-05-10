@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import {  hasRegistered, newRegister,} from "../../actions/register";
+import {  hasRegistered, newRegister,} from "../actions/register";
 import RegisterForm from "./RegisterForm";
 
 
