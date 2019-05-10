@@ -11,18 +11,10 @@ export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE';
 
 const URL = "https://luncher-backend.herokuapp.com/api";
 
-export const hasRegistered = ()=> (dispatch)=>{
+export const newRegister = (user)=> (dispatch)=>{
     dispatch({type: REGISTER});
     axios
-    .get(`${URL}/users`)
-    .then(response => dispatch({type:SUCCESSFUL_REGISTER, payload: response.data}))
-    .catch(error => dispatch({type: FAILED_REGISTER, payload: error}))
-}
-
-export const newRegister = (index)=> (dispatch)=>{
-    dispatch({type: REGISTER});
-    axios
-    .post(`${URL}/register`, index)
+    .post(`${URL}/register`, user)
     .then(response => {dispatch({type: SUCCESSFUL_REGISTER, payload: response.data}); return true})
     .catch(error => {dispatch({type: FAILED_REGISTER, payload: error}); return false})
 }
@@ -35,4 +27,3 @@ export const getData = () => dispatch => {
         .catch(err => {console.log(err.res);dispatch({ type: FETCH_DATA_FAILURE, payload: err.res });
         });
  };
- 

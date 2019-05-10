@@ -18,7 +18,7 @@ const URL = "https://luncher-backend.herokuapp.com/api";
 export const getDonors = ()=> (dispatch)=>{
     dispatch({type: GET_DONOR});
     axios
-    .get(`${URL}/donor/:lastname`)
+    .get(`${URL}/donor/:key`)
     .then(response => dispatch({type:DID_GET_DONOR, payload: response.data}))
     .catch(error => dispatch({type:NO_DONOR, payload: error}))
 }
@@ -26,7 +26,7 @@ export const getDonors = ()=> (dispatch)=>{
 export const donatingTo = (index)=> (dispatch)=>{
     dispatch({type: DONOR});
     axios
-    .put(`${URL}/donor/:lastname`, index)
+    .put(`${URL}/donor/:key`, index)
     .then(response => {dispatch({type: DID_DONATE, payload: response.data}); return true})
     .catch(error => {dispatch({type: DIDNT_DONATE, payload: error}); return false})
 }
