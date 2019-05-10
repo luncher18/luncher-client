@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose  } from 'redux';
@@ -20,4 +19,3 @@ ReactDOM.render(
     </Provider>
   </Router>, document.getElementById('root'));
   export default App;
-
