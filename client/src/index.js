@@ -7,7 +7,7 @@ import { logger } from "./logger";
 import reducer from './Components/reducers/index'
 import App from './App';
 import { BrowserRouter as Router} from "react-router-dom"
-import "./Assets/App.css"
+import "./App.css"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
 const middleware = applyMiddleware(thunk, logger);
