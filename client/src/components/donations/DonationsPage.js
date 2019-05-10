@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import {donatingTo} from "../../actions/donate";
 import Schools from "./Schools"
-// import { Route } from 'react-router-dom';
 import Donations from "./Donations";
+
 
 class DonationsPage extends Component {
 
@@ -12,15 +12,22 @@ class DonationsPage extends Component {
   }
   render() {
     return (
-      <div>
+
+      <div className="DonationsPage">
         
        {/* <Route path ={"/donate"} render= {props =>(<Donations {...props} donors ={this.props.donors}/>)}/> */}
        <Donations donors={this.props.donors} />
-       <Schools schools={this.props.schools}/>
+        <Schools schools={this.props.schools} />
+        
+        
       </div>
+      
+     
     )
   }
 }
+
+
 const mapStateToProps = state =>{
   console.log(state)
     return{
@@ -30,4 +37,5 @@ const mapStateToProps = state =>{
         error: state.error
     }
 }
+      
 export default connect(mapStateToProps, {donatingTo})(DonationsPage);

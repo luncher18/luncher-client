@@ -54,7 +54,7 @@ label {
 
 input {
   padding: 10px 10px;
-  border-radius: 5px;
+  border-radius: 0px;
   outline: none;
   border: 1px solid #cfcfcf;
 }
@@ -62,7 +62,7 @@ input {
 input::placeholder {
   font-size: 1.2em;
   font-weight: lighter;
-  color: #999;
+  color: rgb(68, 65, 65);
 }
 
 input.error {
@@ -131,4 +131,22 @@ input.error {
 .Account small {
   color: #999;
   font-weight: lighter;
+}
+
+.DonationsPage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+
+  padding: 20px 40px;
+  border-radius: 0px;
+
+  box-shadow: 10px 10px 50px rgb(99, 96, 96);
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./Images/lunch2.jpg");
+  opacity: 0.9;
 }
